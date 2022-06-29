@@ -26,6 +26,7 @@ class Character {
     this.species = species;
     this.status = status;
 
+  
     const card = document.createElement("div");
     card.classList.add("characters-card");
 
@@ -41,20 +42,19 @@ class Character {
 
     const cardName = document.createElement("p");
     cardName.classList.add("name");
-    cardName.textContent =
-      this.name.charAt(0).toUpperCase() + this.name.slice(1);
-
+    cardName.textContent = 'Name: ' + this.name;
+      
     const cardGender = document.createElement("p");
     cardGender.classList.add("gender");
-    cardGender.textContent = this.gender;
+    cardGender.textContent = "Gender: "+ this.gender;
 
     const cardSpecies = document.createElement("h2");
     cardSpecies.classList.add("species");
-    cardSpecies.textContent = this.species;
+    cardSpecies.textContent = "Species: " + this.species;
 
     const cardStatus = document.createElement("p");
     cardGender.classList.add("status");
-    cardGender.textContent = this.status;
+    cardGender.textContent = "Status: " + this.status;
 
 
     charactersContainer.appendChild(card);
@@ -70,4 +70,6 @@ class Character {
    
 }
 }
+
+
 
