@@ -8,6 +8,7 @@ const fetchData = async () => {
       
       data.results.length = 20;
       data.results.map(character => new Character(character));
+      
         console.log(Character);     
             
      } catch (error) {
@@ -18,15 +19,18 @@ fetchData();
 
 
 class Character {
-  constructor({ id, name, image, gender, species, status }) {
+  constructor({ id, name, image, gender, species, status }) {    
     this.id = id;
     this.name = name;
     this.image = image;
     this.gender = gender;
     this.species = species;
     this.status = status;
+    this.show();
 
-  
+  }
+
+    show() {
     const card = document.createElement("div");
     card.classList.add("characters-card");
 
@@ -67,9 +71,9 @@ class Character {
     card.appendChild(cardSpecies);
     card.appendChild(cardStatus);
     
-   
+    }
 }
-}
+
 
 
 
